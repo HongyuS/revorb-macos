@@ -43,7 +43,7 @@ bool copy_headers(FILE *fi, ogg_sync_state *si, ogg_stream_state *is,
                   vorbis_info *vi)
 {
     char *buffer = ogg_sync_buffer(si, 4096);
-    int numread = fread(buffer, 1, 4096, fi);
+    size_t numread = fread(buffer, 1, 4096, fi);
     ogg_sync_wrote(si, numread);
 
     ogg_page page;
@@ -199,7 +199,7 @@ int main(int argc, const char **argv)
         int res = ogg_sync_pageout(&sync_in, &page);
         if (res == 0) {
           char *buffer = ogg_sync_buffer(&sync_in, 4096);
-          int numread = fread(buffer, 1, 4096, fi);
+          size_t numread = fread(buffer, 1, 4096, fi);
           if (numread > 0)
             ogg_sync_wrote(&sync_in, numread);
           else
@@ -231,7 +231,7 @@ int main(int argc, const char **argv)
               packet.granulepos = granpos;
             }
             */
-            int bs = vorbis_packet_blocksize(&vi, &packet);
+            int bs = (int)vorbis_packet_blocksize(&vi, &packet);
             if (lastbs)
               granpos += (lastbs+bs) / 4;
             lastbs = bs;
