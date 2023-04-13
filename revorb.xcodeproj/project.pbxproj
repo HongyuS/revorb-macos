@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EC799C3929E8027E00EF4A8D /* revorb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC799C3829E8027E00EF4A8D /* revorb.cpp */; };
-		EC799C4129E8097C00EF4A8D /* libogg.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC799C4029E8097C00EF4A8D /* libogg.0.dylib */; };
-		EC799C4329E8098500EF4A8D /* libogg.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = EC799C4029E8097C00EF4A8D /* libogg.0.dylib */; };
-		EC799C4629E809AA00EF4A8D /* libvorbis.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC799C4529E809AA00EF4A8D /* libvorbis.0.dylib */; };
-		EC799C4729E809AA00EF4A8D /* libvorbis.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = EC799C4529E809AA00EF4A8D /* libvorbis.0.dylib */; };
+		EC799C5229E8171800EF4A8D /* libvorbis.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC799C5129E8171700EF4A8D /* libvorbis.dylib */; };
+		EC799C5429E8172B00EF4A8D /* libogg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EC799C5329E8172B00EF4A8D /* libogg.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,25 +22,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		EC799C4429E8098500EF4A8D /* Embed Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EC799C4329E8098500EF4A8D /* libogg.0.dylib in Embed Libraries */,
-				EC799C4729E809AA00EF4A8D /* libvorbis.0.dylib in Embed Libraries */,
-			);
-			name = "Embed Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EC799C2E29E8025900EF4A8D /* revorb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = revorb; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC799C3829E8027E00EF4A8D /* revorb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = revorb.cpp; sourceTree = "<group>"; };
-		EC799C4029E8097C00EF4A8D /* libogg.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libogg.0.dylib; path = ../../../../../opt/homebrew/Cellar/libogg/1.3.5/lib/libogg.0.dylib; sourceTree = "<group>"; };
-		EC799C4529E809AA00EF4A8D /* libvorbis.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvorbis.0.dylib; path = ../../../../../opt/homebrew/Cellar/libvorbis/1.3.7/lib/libvorbis.0.dylib; sourceTree = "<group>"; };
+		EC799C5129E8171700EF4A8D /* libvorbis.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libvorbis.dylib; path = /opt/homebrew/lib/libvorbis.dylib; sourceTree = "<group>"; };
+		EC799C5329E8172B00EF4A8D /* libogg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libogg.dylib; path = /opt/homebrew/lib/libogg.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC799C4129E8097C00EF4A8D /* libogg.0.dylib in Frameworks */,
-				EC799C4629E809AA00EF4A8D /* libvorbis.0.dylib in Frameworks */,
+				EC799C5429E8172B00EF4A8D /* libogg.dylib in Frameworks */,
+				EC799C5229E8171800EF4A8D /* libvorbis.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +49,7 @@
 			children = (
 				EC799C3029E8025900EF4A8D /* revorb */,
 				EC799C2F29E8025900EF4A8D /* Products */,
-				EC799C3F29E8097C00EF4A8D /* Frameworks */,
+				EC799C5029E8171700EF4A8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,11 +69,11 @@
 			path = revorb;
 			sourceTree = "<group>";
 		};
-		EC799C3F29E8097C00EF4A8D /* Frameworks */ = {
+		EC799C5029E8171700EF4A8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC799C4529E809AA00EF4A8D /* libvorbis.0.dylib */,
-				EC799C4029E8097C00EF4A8D /* libogg.0.dylib */,
+				EC799C5329E8172B00EF4A8D /* libogg.dylib */,
+				EC799C5129E8171700EF4A8D /* libvorbis.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +88,6 @@
 				EC799C2A29E8025900EF4A8D /* Sources */,
 				EC799C2B29E8025900EF4A8D /* Frameworks */,
 				EC799C2C29E8025900EF4A8D /* CopyFiles */,
-				EC799C4429E8098500EF4A8D /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -274,13 +259,9 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = /opt/homebrew/include;
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/opt/homebrew/Cellar/libogg/1.3.5/lib,
-					/opt/homebrew/Cellar/libvorbis/1.3.7/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/lib;
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -294,13 +275,9 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				HEADER_SEARCH_PATHS = /opt/homebrew/include;
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/opt/homebrew/Cellar/libogg/1.3.5/lib,
-					/opt/homebrew/Cellar/libvorbis/1.3.7/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/lib;
 				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
